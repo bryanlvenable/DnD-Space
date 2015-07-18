@@ -1,0 +1,23 @@
+{
+  "name": "DnD-Space",
+  "version": "1.0.0",
+  "description": "A space for anything DnD",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryanlvenable/DnD-Space.git"
+  },
+  "author": "Bryan L. Venable <bryanlvenable@gmail.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/bryanlvenable/DnD-Space/issues"
+  },
+  "homepage": "https://github.com/bryanlvenable/DnD-Space",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-inject": "^1.3.1"
+  }
+}
