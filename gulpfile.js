@@ -1,11 +1,11 @@
-var gulp = require('gulp'),
-    inject = require('gulp-inject'),
-    angularFilesort = require('gulp-angular-filesort');
+var gulp = require('gulp');
+var inject = require('gulp-inject');
+var angularFilesort = require('gulp-angular-filesort');
 
 
-gulp.task('default', function () {
-  // Place code for default task here
-});
+// gulp.task('default', function () {
+//   // Place code for default task here
+// });
 
 gulp.task('index', function () {
   var target = gulp.src('./client/index.html');
@@ -15,6 +15,6 @@ gulp.task('index', function () {
     './client/bower_components/**/*.min.js'])
     .pipe(angularFilesort());
 
-  return target.pipe(inject(sources))
+  return target.pipe(inject(sources, {relative: true}))
     .pipe(gulp.dest('./client'));
-})
+});
