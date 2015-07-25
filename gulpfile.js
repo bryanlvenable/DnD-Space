@@ -32,5 +32,5 @@ gulp.task('reload', function () {
 
 gulp.task('watch', function () {
   liveReload.listen();
-  gulp.watch('./client/app/**/*.js', ['reload']);
+  gulp.watch(['./client/app/**/*.js', './client/app/**/*.css', './client/app/**/*.html'], ['jshint', 'reload']);
 });
