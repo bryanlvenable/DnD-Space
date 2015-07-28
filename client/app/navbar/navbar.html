@@ -1,0 +1,13 @@
+<div ng-contoller="NavbarCtrl">
+  <h2>Navbar</h2>
+  <ul>
+    <li ng-repeat="item in menu">
+      <a href="{{item.link}}">{{item.link}}</a>
+  </ul>
+</div>
+<pre>
+  $state = {{$state.current}}
+  $stateParams = {{$stateParams}}
+  $state full url = {{ $state.$current.url.source }}
+  $scope = $scope.menu
+</pre>

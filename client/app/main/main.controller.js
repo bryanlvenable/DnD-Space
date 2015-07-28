@@ -1,6 +1,6 @@
-// 'use strict';
+'use strict';
 
-// angular.module('dndSpace')
-//   .controller('MainCtrl', function ($scope) {
+angular.module('dndSpace')
+  .controller('MainCtrl', function ($scope) {
 
-//   });
+  });

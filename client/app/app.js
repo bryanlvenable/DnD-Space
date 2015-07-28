@@ -3,19 +3,13 @@
 angular.module('dndSpace', [
   'ui.router'
 ])
-  .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $urlRouterProvider
+      .otherwise('/');
+
+    // $locationProvider.html5Mode(true);
+  })
+  .run(function ($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
-    }
-  ])
-  .config('$stateProvider', '$urlRouterProvider', [function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
-    $stateProvider
-      .state('main', {
-        url: "/",
-        templateUrl: "app/main/main.html"
-      });
-    }
-  ]);
-
-
+  });
