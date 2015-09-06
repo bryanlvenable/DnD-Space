@@ -3,9 +3,9 @@
 'use strict';
 
 module.exports = function(app) {
-  // Default routes
+  // Catch all other routes and send to index.html
   app.route('/*')
     .get(function(req, res) {
-      res.sendfile(app.get('appPath') + '/index.html');
+      res.sendFile('index.html', { "root": 'client' });
     });
 };
