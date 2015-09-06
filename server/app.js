@@ -1,14 +1,17 @@
+// server/app.js
+
+'use strict';
+
+
+// Declare all variable
 var express = require('express');
 var app = express();
+var server;
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+// Require all the things
+require('./routes')(app);
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-
+server = app.listen(3000, function () {
   console.log('DnD-Space listening at http://localhost:3000');
 });
 
