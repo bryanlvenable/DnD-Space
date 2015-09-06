@@ -1,14 +1,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+// Catch all other routes and send to index.html
+app.get('/*', function (req, res) {
+  res.sendfile('client/index.html');
 });
 
 var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-
   console.log('DnD-Space listening at http://localhost:3000');
 });
 
