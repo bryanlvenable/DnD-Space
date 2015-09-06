@@ -1,7 +1,6 @@
-// server/app.js
+// server/server.js
 
 'use strict';
-
 
 // Declare all variable
 var express = require('express');
