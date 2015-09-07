@@ -2,7 +2,7 @@
 
 'use strict';
 
-// Declare all variable
+// Declare all variables
 var express = require('express');
 var app = express();
 var server;
