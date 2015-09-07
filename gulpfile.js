@@ -10,8 +10,8 @@ gulp.task('default', ['watch']);
 gulp.task('index', function () {
   var target = gulp.src('./client/index.html');
   var sources = gulp.src([
-    './client/app/**/*.js',
-    './client/app/**/*.css',
+    './client/dnd/**/*.js',
+    './client/dnd/**/*.css',
     './client/bower_components/**/*.min.js'])
     .pipe(angularFilesort());
 
@@ -20,7 +20,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src('./client/app/**/*.js')
+  return gulp.src('./client/dnd/**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
@@ -32,5 +32,5 @@ gulp.task('reload', function () {
 
 gulp.task('watch', function () {
   liveReload.listen();
-  gulp.watch(['./client/app/**/*.js', './client/app/**/*.css', './client/app/**/*.html'], ['jshint', 'reload']);
+  gulp.watch(['./client/dnd/**/*.js', './client/dnd/**/*.css', './client/dnd/**/*.html'], ['jshint', 'reload']);
 });
