@@ -7,13 +7,13 @@ var liveReload = require('gulp-livereload');
 
 gulp.task('default', ['watch']);
 
-gulp.task('index', function () {
+gulp.task('inject', function () {
   var target = gulp.src('./client/index.html');
   var sources = gulp.src([
     './client/dnd/**/*.js',
     './client/dnd/**/*.css',
-    './client/bower_components/**/*.min.js'])
-    .pipe(angularFilesort());
+    './client/assets/**/*.js',
+    './client/bower_components/**/*.min.js']);
 
   return target.pipe(inject(sources, {relative: true}))
     .pipe(gulp.dest('./client'));

@@ -2,10 +2,8 @@
 
 'use strict';
 
-module.exports = function(app) {
-  // Catch all other routes and send to index.html
-  app.route('/*')
-    .get(function(req, res) {
-      res.sendFile('index.html', { "root": 'client' });
-    });
+module.exports = function (app, express) {
+  // Serve up client folder
+  var router = express.Router();
+  app.use('/', express.static(__dirname + '/../client'));
 };
