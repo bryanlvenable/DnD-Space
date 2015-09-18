@@ -12,8 +12,8 @@ gulp.task('index', function () {
   var sources = gulp.src([
     './client/dnd/**/*.js',
     './client/dnd/**/*.css',
-    './client/bower_components/**/*.min.js'])
-    .pipe(angularFilesort());
+    './client/assets/**/*.js',
+    './client/bower_components/**/*.min.js']);
 
   return target.pipe(inject(sources, {relative: true}))
     .pipe(gulp.dest('./client'));
