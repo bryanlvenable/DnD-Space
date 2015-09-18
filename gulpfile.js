@@ -7,7 +7,7 @@ var liveReload = require('gulp-livereload');
 
 gulp.task('default', ['watch']);
 
-gulp.task('index', function () {
+gulp.task('inject', function () {
   var target = gulp.src('./client/index.html');
   var sources = gulp.src([
     './client/dnd/**/*.js',

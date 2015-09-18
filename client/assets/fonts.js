@@ -1,5 +1,7 @@
 // client/assets/fonts.js
 
+// TODO Speed this up later with https://github.com/typekit/webfontloader
+
 WebFontConfig = {
   google: { families: [ 'Fondamento:400,400italic:latin,latin-ext' ] }
 };
